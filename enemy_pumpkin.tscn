@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://soolin2p8tvc"]
+
+[ext_resource type="Texture2D" uid="uid://cirdwxkbiggjt" path="res://art/Tiles/enemy_pumpkin_state1.png" id="1_bljgn"]
+[ext_resource type="Texture2D" uid="uid://divm51wx8d8de" path="res://art/Tiles/enemy_pumpkin_state2.png" id="2_s2jxj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_owpbb"]
+atlas = ExtResource("1_bljgn")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ja0j"]
+atlas = ExtResource("1_bljgn")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4rl17"]
+atlas = ExtResource("2_s2jxj")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_70ufw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_owpbb")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ja0j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4rl17")
+}],
+"loop": true,
+"name": &"pumpkin_walk",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_55ayj"]
+size = Vector2(24, 24)
+
+[node name="Enemy_Pumpkin" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_70ufw")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_55ayj")

@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://bksl3rvl65x7q"]
+
+[ext_resource type="Texture2D" uid="uid://vk32htt1ag4a" path="res://art/Tiles/Plant03_Stage1.png" id="1_qqnfs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2w0r"]
+atlas = ExtResource("1_qqnfs")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wbro5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2w0r")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5wkxl"]
+size = Vector2(32, 32)
+
+[node name="Plant_Strawjerry" type="CharacterBody2D" groups=["PlantPots"]]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_wbro5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_5wkxl")

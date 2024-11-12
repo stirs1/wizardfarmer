@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://yj4xq8i8uolg"]
+
+[ext_resource type="Script" path="res://wizard.gd" id="1_sawho"]
+[ext_resource type="Texture2D" uid="uid://ds0ext8hi24b5" path="res://art/Tiles/Asset 16.png" id="2_wx33q"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_405dp"]
+atlas = ExtResource("2_wx33q")
+region = Rect2(0, 1, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qssjv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_405dp")
+}],
+"loop": true,
+"name": &"Wizard_still",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gvlaa"]
+size = Vector2(32, 32)
+
+[node name="wizard" type="CharacterBody2D"]
+position = Vector2(242, 233)
+scale = Vector2(0.25, 0.25)
+collision_layer = 2
+script = ExtResource("1_sawho")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_qssjv")
+animation = &"Wizard_still"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_gvlaa")
+debug_color = Color(0.950949, 0, 0.566082, 0.42)

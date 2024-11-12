@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://bqcp6w6fox8wq"]
+
+[ext_resource type="Texture2D" uid="uid://d2ykrrcr8uaud" path="res://art/Tiles/plant02_Stage1.png" id="1_v07ur"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h8ryy"]
+atlas = ExtResource("1_v07ur")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fqk6s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h8ryy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k1dsq"]
+size = Vector2(32, 32)
+
+[node name="Plant_Gourdie" type="CharacterBody2D" groups=["PlantPots"]]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_fqk6s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_k1dsq")

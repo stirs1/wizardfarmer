@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://cyy8y6hv28aek"]
+
+[ext_resource type="Script" path="res://GameSettings.gd" id="1_thh7q"]
+
+[resource]
+script = ExtResource("1_thh7q")
+grape_projectile_speed = 800
+grape_stage_timer = 5
+grape_shoot_timer = 0.1
+enemy_pumpkin_speed = 15

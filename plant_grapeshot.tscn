@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://db0mu6td7him3"]
+
+[ext_resource type="Script" path="res://plant_grapeshot.gd" id="1_m3xee"]
+[ext_resource type="Texture2D" uid="uid://chaq6vacrv262" path="res://art/Tiles/Plant_Stage1.png" id="1_x57iu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_it2gr"]
+atlas = ExtResource("1_x57iu")
+region = Rect2(0, 0, 21, 21)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nqp0c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_it2gr")
+}],
+"loop": true,
+"name": &"Stage1",
+"speed": 0.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Stage2",
+"speed": 0.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Stage3",
+"speed": 0.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bjmw4"]
+size = Vector2(16, 16)
+
+[node name="Plant_Grapeshot" type="CharacterBody2D" groups=["PlantPots"]]
+script = ExtResource("1_m3xee")
+
+[node name="Grape_ProjectilePool" type="Node2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_nqp0c")
+animation = &"Stage1"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_bjmw4")
+debug_color = Color(0.896896, 0.000202534, 0.777581, 0.654902)
