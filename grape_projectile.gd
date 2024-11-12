@@ -20,7 +20,3 @@ func _on_body_entered(_body):
     linear_velocity = Vector2.ZERO
     returned.emit(self)
     add_to_pool()
-
-func something():
-    null
-    pass
