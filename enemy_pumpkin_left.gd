@@ -26,9 +26,3 @@ func _physics_process(delta):
     
     # Apply movement
     move_and_slide()
-
-func nothing():
-    pass
-
-func more_nothing():
-    pass
