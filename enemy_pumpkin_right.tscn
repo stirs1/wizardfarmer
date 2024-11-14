@@ -1,5 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dok7sy7nf0bs7"]
-
-[ext_resource type="PackedScene" uid="uid://soolin2p8tvc" path="res://enemy_pumpkin.tscn" id="1_eoaba"]
-
-[node name="Enemy_Pumpkin_Right" instance=ExtResource("1_eoaba")]

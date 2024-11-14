@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://b4cywl8f18ip2"]
+[gd_scene load_steps=2 format=3 uid="uid://dpvu7dur0x2fw"]
 
 [ext_resource type="PackedScene" uid="uid://soolin2p8tvc" path="res://enemy_pumpkin.tscn" id="1_xgjxv"]
 
