@@ -48,15 +48,6 @@ func _ready():
         wizard = WizardScene.instantiate()
         add_child(wizard)
         print("Created new wizard instance")
-
-    #debug to see if my paths are bad
-    if not wizard:
-        print("failed to get wizard node! Path Main/wizard")
-        return
-        
-    if not dirt:
-        print("failed to get dirt node! Path Main/dirt")
-        return
      
     # set wizard start cell right here. 
     # something weird happening with the wizard's origin point, HC for now 

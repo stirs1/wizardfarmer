@@ -27,7 +27,6 @@ sprite_frames = SubResource("SpriteFrames_0wbpc")
 animation = &"dirt_still"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-29, -33)
 shape = SubResource("RectangleShape2D_dwuat")
 disabled = true
 debug_color = Color(0, 0.6, 0.7, 0.42)
