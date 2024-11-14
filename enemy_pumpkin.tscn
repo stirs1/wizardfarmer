@@ -47,7 +47,8 @@ collision_mask = 0
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_70ufw")
-animation = &"idle"
+animation = &"pumpkin_walk"
+frame_progress = 0.129502
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_55ayj")
