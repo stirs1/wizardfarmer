@@ -26,7 +26,7 @@ func pick_up_plant():
             held_plant.z_index = 100
             add_child(held_plant)
 
-# call this to use the whole pick place input action
+# TODO: add conditional that doesn't allow plant to drop on certain tiles
 func process_pick_place():
     if Input.is_action_just_pressed("pick_place"):
         if held_plant:

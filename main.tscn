@@ -93,16 +93,17 @@ position = Vector2(208, 241)
 scale = Vector2(0.65, 0.65)
 collision_layer = 2
 
-[node name="Enemy_Pumpkin" parent="." instance=ExtResource("6_3j35g")]
+[node name="Enemy_Pumpkin" parent="." groups=["Enemies"] instance=ExtResource("6_3j35g")]
+unique_name_in_owner = true
 position = Vector2(496, 467)
 
-[node name="Enemy_Pumpkin2" parent="." instance=ExtResource("6_3j35g")]
+[node name="Enemy_Pumpkin2" parent="." groups=["Enemies"] instance=ExtResource("6_3j35g")]
 position = Vector2(656, 305)
 
-[node name="Enemy_Pumpkin3" parent="." instance=ExtResource("6_3j35g")]
+[node name="Enemy_Pumpkin3" parent="." groups=["Enemies"] instance=ExtResource("6_3j35g")]
 position = Vector2(337, 304)
 
-[node name="Enemy_Pumpkin4" parent="." instance=ExtResource("6_3j35g")]
+[node name="Enemy_Pumpkin4" parent="." groups=["Enemies"] instance=ExtResource("6_3j35g")]
 position = Vector2(496, 141)
 
 [node name="EnemyTarget" parent="." instance=ExtResource("17_m13fc")]
