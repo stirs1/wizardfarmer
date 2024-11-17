@@ -1,6 +1,7 @@
 extends Area2D
 
 var linear_velocity = Vector2.ZERO
+var projectile_damage = 10
 
 signal returned(projectile) 
 

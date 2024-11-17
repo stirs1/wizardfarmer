@@ -23,6 +23,7 @@ radius = 18.2483
 
 [node name="Grape_Projectile" type="Area2D"]
 scale = Vector2(0.25, 0.25)
+collision_layer = 12
 collision_mask = 5
 script = ExtResource("1_w3pch")
 
