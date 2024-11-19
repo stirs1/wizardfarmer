@@ -18,9 +18,10 @@ func _ready():
 	
 	timer = Timer.new()
 	add_child(timer)
+	timer.autostart =  false
 	timer.wait_time = grape_shot_timer # float changes shoot interval
 	timer.timeout.connect(_on_Timer_timeout)
-	timer.start()
+	#timer.start()
 
 # create pool and initialize starting state
 func initialize_pool(pool_size: int):

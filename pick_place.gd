@@ -21,6 +21,7 @@ func drop_plant():
 			if not held_plant_position_str in Global.no_grow_zones:
 				Global.existing_plant_tiles[str(held_plant.position)] = true
 				held_plant.z_index = 3
+				held_plant.timer.start()
 				held_plant = null
 				return
 			else:
