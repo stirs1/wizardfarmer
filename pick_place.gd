@@ -16,17 +16,21 @@ func drop_plant():
 	var held_plant_position_str = str(held_plant.position)
 	
 	# places plant if allowed to, returning it to correct z layer
-	if not held_plant_position_str in Global.existing_plant_tiles:
-		if not held_plant_position_str in Global.no_grow_zones:
-			Global.existing_plant_tiles[str(held_plant.position)] = true
-			held_plant.z_index = 3
-			held_plant = null
-			return
+	if held_plant_position_str in Global.existing_dirt_tiles:
+		if not held_plant_position_str in Global.existing_plant_tiles:
+			if not held_plant_position_str in Global.no_grow_zones:
+				Global.existing_plant_tiles[str(held_plant.position)] = true
+				held_plant.z_index = 3
+				held_plant = null
+				return
+			else:
+				print("this is a no-grow zone!")
+				return
 		else:
-			print("this is a no-grow zone!")
+			print("there is already a plant here!")
 			return
 	else:
-		print("there is already a plant here!")
+		print("this tile needs to be tilled!")
 		return
 			
 func pick_up_plant():
