@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://dqv5an2dcb8p2"]
+[gd_scene load_steps=14 format=4 uid="uid://dqv5an2dcb8p2"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_1y2lk"]
 [ext_resource type="Texture2D" uid="uid://ckhafygug4a2p" path="res://art/tilesheet.png" id="2_5auk8"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bqcp6w6fox8wq" path="res://plant_gourdie.tscn" id="6_cw0a4"]
 [ext_resource type="PackedScene" uid="uid://bksl3rvl65x7q" path="res://plant_strawjerry.tscn" id="7_ist8w"]
 [ext_resource type="PackedScene" uid="uid://dqbx3nxxecqrs" path="res://plant_aquaclam.tscn" id="8_bny1a"]
+[ext_resource type="PackedScene" uid="uid://cvdsbhnx8dmyr" path="res://heart_home.tscn" id="11_g8oir"]
 [ext_resource type="PackedScene" uid="uid://dpebx8aichf2f" path="res://enemy_target.tscn" id="17_m13fc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gd8pc"]
@@ -108,6 +109,9 @@ position = Vector2(496, 141)
 
 [node name="EnemyTarget" parent="." instance=ExtResource("17_m13fc")]
 unique_name_in_owner = true
+position = Vector2(496, 304)
+
+[node name="HeartHome" parent="." instance=ExtResource("11_g8oir")]
 position = Vector2(496, 304)
 
 [editable path="dirt"]

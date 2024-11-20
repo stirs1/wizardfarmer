@@ -6,5 +6,6 @@ extends Resource
 @export var grape_stage_timer: int = 5
 @export var grape_shoot_timer: float = 0.5
 
+# enemy_pumpkin
 @export var enemy_pumpkin_speed: int = 200
 @export var enemy_pumpkin_health: float = 100.0

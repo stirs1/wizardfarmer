@@ -1,0 +1,65 @@
+[gd_scene load_steps=14 format=3 uid="uid://cvdsbhnx8dmyr"]
+
+[ext_resource type="Script" path="res://heart_home.gd" id="1_5uva4"]
+[ext_resource type="Texture2D" uid="uid://ckhafygug4a2p" path="res://art/tilesheet.png" id="1_apu3t"]
+[ext_resource type="Texture2D" uid="uid://bx6o8ret2cvv5" path="res://art/Tiles/hearthome_75_1.png" id="2_8l7yk"]
+[ext_resource type="Texture2D" uid="uid://bucnnk4axyc7y" path="res://art/Tiles/hearthome_50.png" id="3_23wey"]
+[ext_resource type="Texture2D" uid="uid://cn3r1bko4nwws" path="res://art/Tiles/Asset 31.png" id="4_rb180"]
+[ext_resource type="Texture2D" uid="uid://cl7tey4x2wfru" path="res://art/Tiles/hearthome_00.png" id="5_bbu5e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lh3r5"]
+atlas = ExtResource("1_apu3t")
+region = Rect2(64, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ncte8"]
+atlas = ExtResource("2_8l7yk")
+region = Rect2(0, 0, 33, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xo4lk"]
+atlas = ExtResource("3_23wey")
+region = Rect2(0, 0, 33, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7tcus"]
+atlas = ExtResource("4_rb180")
+region = Rect2(0, 0, 33, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hnem4"]
+atlas = ExtResource("5_bbu5e")
+region = Rect2(0, 0, 33, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_58gm1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lh3r5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ncte8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xo4lk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7tcus")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hnem4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cudt6"]
+size = Vector2(32, 32)
+
+[node name="HeartHome" type="Area2D"]
+script = ExtResource("1_5uva4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_58gm1")
+frame_progress = 0.647601
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_cudt6")
