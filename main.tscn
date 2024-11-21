@@ -114,7 +114,5 @@ position = Vector2(496, 304)
 [node name="HeartHome" parent="." instance=ExtResource("11_g8oir")]
 position = Vector2(496, 304)
 
-[connection signal="deal_damage" from="Enemy_Pumpkin" to="HeartHome" method="_on_enemy_pumpkin_deal_damage"]
-
 [editable path="dirt"]
 [editable path="wizard"]

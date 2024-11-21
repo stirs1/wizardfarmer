@@ -10,5 +10,5 @@ grape_stage_timer = 5
 grape_shoot_timer = 0.5
 enemy_pumpkin_speed = 50
 enemy_pumpkin_health = 50.0
-enemy_pumpkin_damage = 20
+enemy_pumpkin_damage = 10
 heart_home_health = 100.0
