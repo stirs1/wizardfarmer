@@ -51,9 +51,9 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cudt6"]
-size = Vector2(32, 32)
+size = Vector2(30, 29)
 
-[node name="HeartHome" type="Area2D"]
+[node name="HeartHome" type="Area2D" groups=["HeartHome"]]
 script = ExtResource("1_5uva4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -61,5 +61,5 @@ sprite_frames = SubResource("SpriteFrames_58gm1")
 frame_progress = 0.647601
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
+position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_cudt6")

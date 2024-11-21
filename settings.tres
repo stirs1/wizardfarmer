@@ -4,9 +4,11 @@
 
 [resource]
 script = ExtResource("1_thh7q")
-grape_projectile_damage = 100
+grape_projectile_damage = 10
 grape_projectile_speed = 400
 grape_stage_timer = 5
 grape_shoot_timer = 0.5
-enemy_pumpkin_speed = 15
+enemy_pumpkin_speed = 50
 enemy_pumpkin_health = 50.0
+enemy_pumpkin_damage = 20
+heart_home_health = 100.0
