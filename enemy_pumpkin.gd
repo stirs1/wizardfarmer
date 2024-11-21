@@ -3,8 +3,6 @@
 
 extends CharacterBody2D
 
-signal deal_damage(damage_amount)
-
 @onready var settings = preload("res://settings.tres")
 @onready var enemy_target = get_tree().root.get_node("Main/EnemyTarget")
 @onready var Projectiles = get_tree().get_nodes_in_group("Projectiles")
@@ -31,24 +29,24 @@ func _physics_process(delta):
     # Apply movement
     move_and_slide()
     
-    # kill the enemy
-    if health <= 0:
-        queue_free()
-
-
 func _on_enemy_pumpkin_collision_detector_area_entered(area: Area2D) -> void:
-    
-    # DEBUG
-    print("pumpkin hit by: ", area)
-    print("pumpkin health before hit: ", health)
-    print("pumpkin new_health before hit: ", new_health)
-    
-    new_health = health - area.projectile_damage
-    
-    # DEBUG
-    print("pumpkin new_health after hit: ", new_health)
-    
-    health = new_health
-    
-    #DEBUG
-    print("health after all the calculations: ", health)
+    if area.is_in_group("Projectiles"):
+        
+        # DEBUG
+        print("pumpkin hit by: ", area)
+        print("pumpkin health before hit: ", health)
+        print("pumpkin new_health before hit: ", new_health)
+        
+        new_health = health - area.projectile_damage
+        
+        # DEBUG
+        print("pumpkin new_health after hit: ", new_health)
+        
+        health = new_health
+        
+        #DEBUG
+        print("health after all the calculations: ", health)
+        
+        # kill the enemy
+        if health <= 0:
+            queue_free()
