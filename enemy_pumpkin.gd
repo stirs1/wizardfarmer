@@ -3,10 +3,14 @@
 
 extends CharacterBody2D
 
+signal deal_damage(damage_amount)
+
 @onready var settings = preload("res://settings.tres")
 @onready var enemy_target = get_tree().root.get_node("Main/EnemyTarget")
+@onready var Projectiles = get_tree().get_nodes_in_group("Projectiles")
 
 @onready var health = settings.enemy_pumpkin_health
+@onready var damage = settings.enemy_pumpkin_damage
 
 var new_health: int = 0
 var projectile_count: int = 0

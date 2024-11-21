@@ -38,6 +38,8 @@ window/stretch/scale=1.6
 
 PlantPots="available plant pots to choose and plant from"
 Enemies="current enemies in scene"
+Projectiles="current projectiles in scene"
+HeartHome="current heart homes in scene"
 
 [input]
 

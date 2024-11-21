@@ -9,3 +9,7 @@ extends Resource
 # enemy_pumpkin
 @export var enemy_pumpkin_speed: int = 200
 @export var enemy_pumpkin_health: float = 100.0
+@export var enemy_pumpkin_damage: int = 20
+
+# heart_home
+@export var heart_home_health: float = 100.0
