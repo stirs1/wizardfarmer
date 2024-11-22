@@ -54,6 +54,8 @@ animations = [{
 size = Vector2(34, 34)
 
 [node name="HeartHome" type="Area2D" groups=["HeartHome"]]
+collision_layer = 16
+collision_mask = 4
 script = ExtResource("1_5uva4")
 
 [node name="HeartHome_Sprites" type="AnimatedSprite2D" parent="."]
