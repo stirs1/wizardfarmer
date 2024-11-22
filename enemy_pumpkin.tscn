@@ -42,11 +42,11 @@ animations = [{
 size = Vector2(24, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ek0n"]
-size = Vector2(24, 24)
+size = Vector2(26, 26)
 
 [node name="Enemy_Pumpkin" type="CharacterBody2D"]
-collision_layer = 12
-collision_mask = 28
+collision_layer = 4
+collision_mask = 24
 script = ExtResource("1_5o81w")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
