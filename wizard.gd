@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 var speed = 200 # this number changes the wizard's speed
 @onready var tile_size
+@onready var grapeshot = get_tree().root.get_node("Main/Plant_Grapeshot")
 
 func _ready():
 	pass
@@ -45,7 +46,11 @@ func _process(delta: float) -> void:
 		velocity = direction.normalized() * speed
 	else:
 		velocity = Vector2.ZERO
-		
+	
+	if Input.is_action_just_pressed("debug"):
+		pass
+	
+	
 	move_and_slide()     
 	
 func _on_key_pressed():
