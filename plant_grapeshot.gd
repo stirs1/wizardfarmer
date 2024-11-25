@@ -18,6 +18,7 @@ var projectile_position
 var projectile_rotation
 var projectile_velocity
 var plant_position
+var g_dtag = "GRAPE: "
 
 @onready var projectile_pool = $Grape_ProjectilePool
 
@@ -28,7 +29,7 @@ var plant_position
 
 # initialize pool and timer
 func _ready():
-	initialize_pool(10) # integer changes number of projectiles in pool
+	initialize_pool(27) # integer changes number of projectiles in pool
 	
 	# initialize projectile timer
 	timer = Timer.new()
@@ -57,29 +58,33 @@ func initialize_pool(pool_size: int):
 		projectile.returned.connect(_on_projectile_returned) 
 		projectile.add_to_pool()
 
-# shoot projectile from plant location
+# shoot projectiles from plant location according to plant level
 func shoot():
-	# this can be simplified
-	projectile = get_projectile() 
-	projectile_position = projectile.position 
-	projectile_rotation = projectile.rotation
-	projectile_velocity = projectile.linear_velocity
-	plant_position = self.global_position
 	
-	# TODO: finish code to make a double and triple shot attached to level upgrade
 	match current_state:
 		PlantState.LEVEL_1:
 			spawn_projectile(Vector2.ZERO)
-		#PlantState.LEVEL_2:
-			#spawn_projectile(Vector2(30, 0))
-			#spawn_projectile(Vector2( -30, 0))
-	
-# TODO: finish code to get offset actually working
+		PlantState.LEVEL_2:
+			spawn_projectile(Vector2(-3, 0))
+			spawn_projectile(Vector2( 3, 0))
+		PlantState.LEVEL_3:
+			spawn_projectile(Vector2(-3, 0))
+			spawn_projectile(Vector2(3, 0))
+			spawn_projectile(Vector2(0, -5))
+
 func spawn_projectile(offset: Vector2):
+	
+	# this can be simplified
+	projectile = get_projectile()
+	projectile_position = projectile.position
+	projectile_rotation = projectile.rotation
+	projectile_velocity = projectile.linear_velocity
+	plant_position = position
+	
 	if projectile:
-		projectile_position = plant_position + offset
-		projectile_rotation = rotation
-		projectile.linear_velocity = Vector2.DOWN * grape_projectile_speed 
+		projectile.global_position = global_position + offset
+		projectile.rotation = rotation
+		projectile.linear_velocity = Vector2.DOWN * grape_projectile_speed
 		projectile_velocity = projectile.linear_velocity
 		projectile.show()
 
