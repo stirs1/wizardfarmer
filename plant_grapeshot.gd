@@ -6,8 +6,6 @@ enum PlantState {
 	LEVEL_3
 }
 
-signal key_pressed
-
 var settings = preload("res://settings.tres")
 var timer
 var stage_timer
