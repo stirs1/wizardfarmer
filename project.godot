@@ -28,11 +28,12 @@ shapes/collision/shape_color=Color(0.964706, 0, 0.498039, 0.654902)
 
 [display]
 
-window/size/viewport_width=1200
-window/size/viewport_height=1200
-window/size/initial_position_type=2
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 window/size/resizable=false
-window/stretch/scale=1.6
+window/stretch/mode="viewport"
+window/stretch/scale=2.0
+window/stretch/scale_mode="integer"
 
 [global_group]
 
