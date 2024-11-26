@@ -12,6 +12,7 @@ extends CharacterBody2D
 
 var new_health: int = 0
 var projectile_count: int = 0
+var pump_dtag := "PUMPKIN: "
 
 func _ready():
     # TODO: Set initial start position
@@ -33,19 +34,19 @@ func _on_enemy_pumpkin_collision_detector_area_entered(area: Area2D) -> void:
     if area.is_in_group("Projectiles"):
         
         # DEBUG
-        print("pumpkin hit by: ", area)
-        print("pumpkin health before hit: ", health)
-        print("pumpkin new_health before hit: ", new_health)
+        print(pump_dtag, "pumpkin hit by: ", area)
+        print(pump_dtag, "pumpkin health before hit: ", health)
+        print(pump_dtag, "pumpkin new_health before hit: ", new_health)
         
         new_health = health - area.projectile_damage
         
         # DEBUG
-        print("pumpkin new_health after hit: ", new_health)
+        print(pump_dtag, "pumpkin new_health after hit: ", new_health)
         
         health = new_health
         
         #DEBUG
-        print("health after all the calculations: ", health)
+        print(pump_dtag, "health after all the calculations: ", health)
         
         # kill the enemy
         if health <= 0:
