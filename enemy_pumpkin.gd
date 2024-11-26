@@ -15,12 +15,21 @@ var projectile_count: int = 0
 var pump_dtag := "PUMPKIN: "
 
 func _ready():
+    
+    GameManager.game_started.connect(_on_game_started)
     # TODO: Set initial start position
     $AnimatedSprite2D.play("pumpkin_walk")
-
+    
+    await get_tree().root.ready
+    # DEBUG
+    if global_position:
+        print (pump_dtag, "global_position is: ", global_position)
+    else:
+        pass
+        
 func _physics_process(delta):
 
-    var direction = global_position.direction_to(%EnemyTarget.global_position)
+    var direction = global_position.direction_to(enemy_target.global_position)
     velocity = direction * settings.enemy_pumpkin_speed
     
     # TODO: if velocity = 0, play idle animation (this doesn't work currently)
@@ -51,3 +60,6 @@ func _on_enemy_pumpkin_collision_detector_area_entered(area: Area2D) -> void:
         # kill the enemy
         if health <= 0:
             queue_free()
+
+func _on_game_started():
+    print(pump_dtag, "global position NOW is: ", global_position)
