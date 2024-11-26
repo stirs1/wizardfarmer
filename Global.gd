@@ -106,11 +106,7 @@ func _ready():
     }
     
 func _physics_process(delta: float) -> void:
-    
+          
     # defining wizard global position and grid coordinates
     wizard_position = wizard.global_position
     wizard_cell_position = round(wizard_position / tile_size)
-    
-    #check to see if wizard position is updating
-    #print(wizard_position)
-    #print(wizard_cell_position)
