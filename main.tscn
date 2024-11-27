@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://dqv5an2dcb8p2"]
+[gd_scene load_steps=17 format=4 uid="uid://dqv5an2dcb8p2"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_1y2lk"]
 [ext_resource type="Texture2D" uid="uid://ckhafygug4a2p" path="res://art/tilesheet.png" id="2_5auk8"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://bksl3rvl65x7q" path="res://plant_strawjerry.tscn" id="7_ist8w"]
 [ext_resource type="PackedScene" uid="uid://dqbx3nxxecqrs" path="res://plant_aquaclam.tscn" id="8_bny1a"]
 [ext_resource type="PackedScene" uid="uid://cvdsbhnx8dmyr" path="res://heart_home.tscn" id="11_g8oir"]
+[ext_resource type="Texture2D" uid="uid://cirdwxkbiggjt" path="res://art/Tiles/enemy_pumpkin_state1.png" id="11_ipa34"]
+[ext_resource type="Texture2D" uid="uid://divm51wx8d8de" path="res://art/Tiles/enemy_pumpkin_state2.png" id="12_1cmci"]
 [ext_resource type="PackedScene" uid="uid://dpebx8aichf2f" path="res://enemy_target.tscn" id="17_m13fc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gd8pc"]
@@ -137,6 +139,15 @@ offset_bottom = 97.0
 text = "WASD to move
 P to pick up
 T to till"
+
+[node name="RandomButton" type="TextureButton" parent="."]
+z_index = 1000
+offset_left = 705.0
+offset_top = 222.0
+offset_right = 738.0
+offset_bottom = 255.0
+texture_normal = ExtResource("11_ipa34")
+texture_pressed = ExtResource("12_1cmci")
 
 [editable path="dirt"]
 [editable path="wizard"]
