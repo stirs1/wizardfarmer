@@ -1,3 +1,4 @@
+# FIXME: game crashes when non-grape plant is attempted to plant
 extends Node
 
 @onready var plant_pots = get_tree().get_nodes_in_group("PlantPots")
