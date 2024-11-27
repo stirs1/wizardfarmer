@@ -80,22 +80,22 @@ position = Vector2(-16, -16)
 debug_color = Color(0.964706, 0, 0.498039, 0.411765)
 
 [node name="Plant_Grapeshot" parent="." instance=ExtResource("5_7f7jy")]
-position = Vector2(208, 241)
+position = Vector2(-52, 193)
 collision_layer = 2
 metadata/_edit_group_ = true
 
 [node name="Plant_Gourdie" parent="." instance=ExtResource("6_cw0a4")]
-position = Vector2(208, 241)
+position = Vector2(-46, 153)
 scale = Vector2(0.65, 0.65)
 collision_layer = 2
 
 [node name="Plant_Strawjerry" parent="." instance=ExtResource("7_ist8w")]
-position = Vector2(208, 241)
+position = Vector2(-46, 104)
 scale = Vector2(0.65, 0.65)
 collision_layer = 2
 
 [node name="Plant_Aquaclam" parent="." instance=ExtResource("8_bny1a")]
-position = Vector2(208, 241)
+position = Vector2(-49, 67)
 scale = Vector2(0.65, 0.65)
 collision_layer = 2
 
