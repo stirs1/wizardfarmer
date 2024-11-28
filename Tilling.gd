@@ -35,6 +35,7 @@ func place_dirt(position: Vector2) -> StaticBody2D:
 	if not position_str in Global.existing_dirt_tiles:
 		if not position_str in Global.no_grow_zones:
 			parent.add_child(dirt)
+			dirt.add_to_group("DirtTiles")
 			Global.existing_dirt_tiles[str(dirt.position)] = true
 	
 	# not quiiite sure what this means? just that the function gives a dirt

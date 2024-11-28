@@ -43,6 +43,7 @@ Enemies="current enemies in scene"
 Projectiles="current projectiles in scene"
 HeartHome="current heart homes in scene"
 CurrentPlants="all current plants in scene"
+DirtTiles="all current dirt tiles in scene"
 
 [input]
 

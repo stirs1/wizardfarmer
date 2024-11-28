@@ -204,5 +204,17 @@ offset_bottom = 224.0
 texture_normal = ExtResource("21_0piad")
 texture_pressed = ExtResource("22_ttdp7")
 
+[node name="GameOverText" type="TextEdit" parent="."]
+visible = false
+z_index = 1000
+offset_left = 683.0
+offset_top = 319.0
+offset_right = 791.0
+offset_bottom = 386.0
+theme_override_colors/background_color = Color(0.898039, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "REKT"
+
 [editable path="dirt"]
 [editable path="wizard"]
