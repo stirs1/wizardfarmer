@@ -17,8 +17,19 @@ var pumpkin_start_cell
 @onready var heart_home = get_tree().root.get_node("Main/HeartHome")
 
 func _setup_buttons():
+	var left_button = get_tree().root.get_node("Main/LeftButton")
+	var right_button = get_tree().root.get_node("Main/RightButton")
+	var up_button = get_tree().root.get_node("Main/UpButton")
+	var down_button = get_tree().root.get_node("Main/DownButton")
 	var random_button = get_tree().root.get_node("Main/RandomButton")
+	var all_button = get_tree().root.get_node("Main/AllButton")
+	
+	left_button.pressed.connect(func(): spawn_pumpkin("left"))
+	right_button.pressed.connect(func(): spawn_pumpkin("right"))
+	up_button.pressed.connect(func(): spawn_pumpkin("up"))
+	down_button.pressed.connect(func(): spawn_pumpkin("down"))
 	random_button.pressed.connect(spawn_random_pumpkin)
+	all_button.pressed.connect(spawn_all_pumpkins)
 	
 var spawn_positions = {
 	"left": Vector2(337, 304),

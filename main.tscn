@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://dqv5an2dcb8p2"]
+[gd_scene load_steps=27 format=4 uid="uid://dqv5an2dcb8p2"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_1y2lk"]
 [ext_resource type="Texture2D" uid="uid://ckhafygug4a2p" path="res://art/tilesheet.png" id="2_5auk8"]
@@ -11,7 +11,17 @@
 [ext_resource type="PackedScene" uid="uid://cvdsbhnx8dmyr" path="res://heart_home.tscn" id="11_g8oir"]
 [ext_resource type="Texture2D" uid="uid://cirdwxkbiggjt" path="res://art/Tiles/enemy_pumpkin_state1.png" id="11_ipa34"]
 [ext_resource type="Texture2D" uid="uid://divm51wx8d8de" path="res://art/Tiles/enemy_pumpkin_state2.png" id="12_1cmci"]
+[ext_resource type="Texture2D" uid="uid://0od81xag0tia" path="res://art/Tiles/Asset 33.png" id="13_5i8gy"]
+[ext_resource type="Texture2D" uid="uid://did1awg2m1w6y" path="res://art/Tiles/Asset 37.png" id="14_njp5s"]
+[ext_resource type="Texture2D" uid="uid://brwlr0swjqmjv" path="res://art/Tiles/Asset 34.png" id="15_4hgjt"]
+[ext_resource type="Texture2D" uid="uid://c7q2j06gwr18y" path="res://art/Tiles/Asset 38.png" id="16_jqcd6"]
 [ext_resource type="PackedScene" uid="uid://dpebx8aichf2f" path="res://enemy_target.tscn" id="17_m13fc"]
+[ext_resource type="Texture2D" uid="uid://cfsh251r6ld07" path="res://art/Tiles/Asset 35.png" id="17_non1k"]
+[ext_resource type="Texture2D" uid="uid://b450ugt4jw1is" path="res://art/Tiles/Asset 39.png" id="18_hl5gs"]
+[ext_resource type="Texture2D" uid="uid://bsua4isrhj3nm" path="res://art/Tiles/Asset 36.png" id="19_vyq66"]
+[ext_resource type="Texture2D" uid="uid://bgp7oixaqtpte" path="res://art/Tiles/Asset 40.png" id="20_0uii7"]
+[ext_resource type="Texture2D" uid="uid://cox8wn6rscmb6" path="res://art/Tiles/Asset 42.png" id="21_0piad"]
+[ext_resource type="Texture2D" uid="uid://fhgmvqcuq8nm" path="res://art/Tiles/Asset 43.png" id="22_ttdp7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gd8pc"]
 texture = ExtResource("2_5auk8")
@@ -142,12 +152,57 @@ T to till"
 
 [node name="RandomButton" type="TextureButton" parent="."]
 z_index = 1000
-offset_left = 705.0
-offset_top = 222.0
-offset_right = 738.0
-offset_bottom = 255.0
+offset_left = 703.0
+offset_top = 224.0
+offset_right = 736.0
+offset_bottom = 257.0
 texture_normal = ExtResource("11_ipa34")
 texture_pressed = ExtResource("12_1cmci")
+
+[node name="LeftButton" type="TextureButton" parent="."]
+z_index = 1000
+offset_left = 671.0
+offset_top = 223.0
+offset_right = 704.0
+offset_bottom = 257.0
+texture_normal = ExtResource("13_5i8gy")
+texture_pressed = ExtResource("14_njp5s")
+
+[node name="UpButton" type="TextureButton" parent="."]
+z_index = 1000
+offset_left = 703.0
+offset_top = 191.0
+offset_right = 736.0
+offset_bottom = 224.0
+texture_normal = ExtResource("15_4hgjt")
+texture_pressed = ExtResource("16_jqcd6")
+
+[node name="RightButton" type="TextureButton" parent="."]
+z_index = 1000
+offset_left = 735.0
+offset_top = 223.0
+offset_right = 770.0
+offset_bottom = 258.0
+texture_normal = ExtResource("17_non1k")
+texture_pressed = ExtResource("18_hl5gs")
+
+[node name="DownButton" type="TextureButton" parent="."]
+z_index = 1000
+offset_left = 703.0
+offset_top = 255.0
+offset_right = 736.0
+offset_bottom = 288.0
+texture_normal = ExtResource("19_vyq66")
+texture_pressed = ExtResource("20_0uii7")
+
+[node name="AllButton" type="TextureButton" parent="."]
+z_index = 1000
+offset_left = 734.0
+offset_top = 192.0
+offset_right = 767.0
+offset_bottom = 224.0
+texture_normal = ExtResource("21_0piad")
+texture_pressed = ExtResource("22_ttdp7")
 
 [editable path="dirt"]
 [editable path="wizard"]
