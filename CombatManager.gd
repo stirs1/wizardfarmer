@@ -11,6 +11,7 @@ var pumpkin_start_cell
 @onready var heart_home = get_tree().root.get_node("Main/HeartHome")
 @onready var game_over_box = get_tree().root.get_node("Main/GameOverText")
 
+# allows buttons to be set up at once at the correct time in the process
 func _setup_buttons():
 	var left_button = get_tree().root.get_node("Main/LeftButton")
 	var right_button = get_tree().root.get_node("Main/RightButton")
@@ -25,7 +26,7 @@ func _setup_buttons():
 	down_button.pressed.connect(func(): spawn_pumpkin("down"))
 	random_button.pressed.connect(spawn_random_pumpkin)
 	all_button.pressed.connect(spawn_all_pumpkins)
-	
+
 var spawn_positions = {
 	"left": Vector2(337, 304),
 	"right": Vector2(656, 305),
@@ -34,8 +35,12 @@ var spawn_positions = {
 }
 func _ready():
 	await get_tree().root.ready
+	
+	# connect signals
 	GameManager.game_started.connect(_on_game_started)
 	GameManager.game_over.connect(_on_game_over)
+	
+	# set buttons here
 	_setup_buttons()
  
 func spawn_pumpkin(position_key: String):

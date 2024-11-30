@@ -31,6 +31,7 @@ texture = ExtResource("2_quun6")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:0/0/custom_data_0 = true
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gd8pc"]
 texture = ExtResource("2_5auk8")
@@ -62,7 +63,7 @@ physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 0
 physics_layer_1/collision_layer = 64
 physics_layer_1/collision_mask = 0
-custom_data_layer_0/name = "destroyable"
+custom_data_layer_0/name = "is_water"
 custom_data_layer_0/type = 1
 sources/1 = SubResource("TileSetAtlasSource_gd8pc")
 sources/0 = SubResource("TileSetAtlasSource_0l7co")
@@ -125,7 +126,7 @@ scale = Vector2(0.65, 0.65)
 collision_layer = 2
 
 [node name="WaterPlops" parent="." instance=ExtResource("25_chr2e")]
-position = Vector2(207, 433)
+position = Vector2(208, 401)
 
 [node name="EnemyTarget" parent="." instance=ExtResource("17_m13fc")]
 unique_name_in_owner = true
