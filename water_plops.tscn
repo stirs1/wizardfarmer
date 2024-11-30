@@ -1,16 +1,16 @@
 [gd_scene load_steps=5 format=3 uid="uid://bh8e2c58468gv"]
 
-[ext_resource type="Texture2D" uid="uid://bfj12p4bcxhbl" path="res://art/Tiles/Asset 48.png" id="1_3k8m5"]
+[ext_resource type="Texture2D" uid="uid://obru3fkx8wx4" path="res://art/Tiles/Asset 49.png" id="1_40wo6"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8jbj7"]
-atlas = ExtResource("1_3k8m5")
+[sub_resource type="AtlasTexture" id="AtlasTexture_gm3fk"]
+atlas = ExtResource("1_40wo6")
 region = Rect2(0, 0, 33, 33)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rm8yg"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8jbj7")
+"texture": SubResource("AtlasTexture_gm3fk")
 }],
 "loop": true,
 "name": &"default",
