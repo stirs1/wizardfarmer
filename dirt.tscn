@@ -30,7 +30,7 @@ animations = [{
 "texture": ExtResource("5_8xc1b")
 }],
 "loop": true,
-"name": &"dirt_water",
+"name": &"default",
 "speed": 0.0
 }]
 
@@ -42,8 +42,6 @@ script = ExtResource("1_s8v23")
 
 [node name="dirt_sprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_0wbpc")
-animation = &"dirt_water"
-frame_progress = 0.333354
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_dwuat")
