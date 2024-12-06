@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bh8e2c58468gv"]
+[gd_scene load_steps=6 format=3 uid="uid://bh8e2c58468gv"]
 
 [ext_resource type="Texture2D" uid="uid://obru3fkx8wx4" path="res://art/Tiles/Asset 49.png" id="1_40wo6"]
+[ext_resource type="Script" path="res://water_plops.gd" id="1_u6o8k"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gm3fk"]
 atlas = ExtResource("1_40wo6")
@@ -23,6 +24,7 @@ size = Vector2(33.8462, 33.8462)
 [node name="WaterPlops" type="CharacterBody2D"]
 collision_layer = 32
 collision_mask = 0
+script = ExtResource("1_u6o8k")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.4, 0.4)
