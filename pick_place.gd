@@ -24,9 +24,15 @@ func drop_plant():
 				# set held plant visible above wizard
 				held_plant.z_index = 3
 				# start held plant timer
-				held_plant.timer.start()
+				if held_plant.get("timer"):
+					held_plant.timer.start()
+				else:
+					pass
 				# start held plant stage timer
-				held_plant.stage_timer.start()
+				if held_plant.get("stage_timer"):
+					held_plant.stage_timer.start()
+				else:
+					pass
 				# add plant to current plants, for future use
 				held_plant.add_to_group("CurrentPlants")
 				# place plant
