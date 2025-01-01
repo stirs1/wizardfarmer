@@ -1,17 +1,17 @@
 [gd_scene load_steps=6 format=3 uid="uid://yj4xq8i8uolg"]
 
 [ext_resource type="Script" path="res://wizard.gd" id="1_sawho"]
-[ext_resource type="Texture2D" uid="uid://ds0ext8hi24b5" path="res://art/Tiles/Asset 16.png" id="2_wx33q"]
+[ext_resource type="Texture2D" uid="uid://btxpriuatdd1s" path="res://art/asesprite files/wizard.png" id="2_510n5"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_405dp"]
-atlas = ExtResource("2_wx33q")
-region = Rect2(0, 1, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_43iwh"]
+atlas = ExtResource("2_510n5")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qssjv"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_405dp")
+"texture": SubResource("AtlasTexture_43iwh")
 }],
 "loop": true,
 "name": &"Wizard_still",
