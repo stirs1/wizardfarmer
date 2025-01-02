@@ -1,16 +1,16 @@
 [gd_scene load_steps=5 format=3 uid="uid://dqbx3nxxecqrs"]
 
-[ext_resource type="Texture2D" uid="uid://dlv6iwudy82gh" path="res://art/Tiles/plant04_Stage1.png" id="1_23u7w"]
+[ext_resource type="Texture2D" uid="uid://d0ndfjdkhifhx" path="res://art/asesprite files/aquaclam_001.png" id="1_t2wvd"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_e2ml8"]
-atlas = ExtResource("1_23u7w")
-region = Rect2(0, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_wvghi"]
+atlas = ExtResource("1_t2wvd")
+region = Rect2(0, 0, 18, 18)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7alei"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_e2ml8")
+"texture": SubResource("AtlasTexture_wvghi")
 }],
 "loop": true,
 "name": &"default",

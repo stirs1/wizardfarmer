@@ -3,15 +3,15 @@
 [ext_resource type="Script" path="res://wizard.gd" id="1_sawho"]
 [ext_resource type="Texture2D" uid="uid://btxpriuatdd1s" path="res://art/asesprite files/wizard.png" id="2_510n5"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_43iwh"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_jk8l4"]
 atlas = ExtResource("2_510n5")
-region = Rect2(0, 0, 32, 32)
+region = Rect2(0, 0, 24, 24)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qssjv"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_43iwh")
+"texture": SubResource("AtlasTexture_jk8l4")
 }],
 "loop": true,
 "name": &"Wizard_still",
@@ -19,11 +19,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gvlaa"]
-size = Vector2(32, 32)
+size = Vector2(24, 24)
 
 [node name="wizard" type="CharacterBody2D"]
 position = Vector2(242, 233)
-scale = Vector2(0.25, 0.25)
 collision_layer = 2
 collision_mask = 65
 script = ExtResource("1_sawho")

@@ -35,7 +35,7 @@ func place_dirt(position: Vector2) -> StaticBody2D:
 	if not position_str in Global.existing_dirt_tiles:
 		if not position_str in Global.no_grow_zones:
 			parent.add_child(dirt)
-			dirt.set_water_level(3)
+			dirt.set_water_level(0)
 			dirt.add_to_group("DirtTiles")
 			Global.existing_dirt_tiles[str(dirt.position)] = true
 	

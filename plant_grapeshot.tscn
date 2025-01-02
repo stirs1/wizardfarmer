@@ -5,23 +5,23 @@
 [ext_resource type="Texture2D" uid="uid://c3l1ybc54j24d" path="res://art/asesprite files/grapeshot_002.png" id="3_8cfps"]
 [ext_resource type="Texture2D" uid="uid://ikdmwsch8k8u" path="res://art/asesprite files/grapeshot_003.png" id="4_hsull"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_unbgn"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_nhfap"]
 atlas = ExtResource("2_bcyae")
-region = Rect2(0, 0, 32, 32)
+region = Rect2(0, 0, 18, 18)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1fel7"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_nyx76"]
 atlas = ExtResource("3_8cfps")
-region = Rect2(0, 0, 32, 32)
+region = Rect2(0, 0, 18, 18)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_s5f7g"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_i3rvc"]
 atlas = ExtResource("4_hsull")
-region = Rect2(0, 0, 32, 32)
+region = Rect2(0, 0, 18, 18)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nqp0c"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_unbgn")
+"texture": SubResource("AtlasTexture_nhfap")
 }],
 "loop": true,
 "name": &"LEVEL_1",
@@ -29,7 +29,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1fel7")
+"texture": SubResource("AtlasTexture_nyx76")
 }],
 "loop": true,
 "name": &"LEVEL_2",
@@ -37,7 +37,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_s5f7g")
+"texture": SubResource("AtlasTexture_i3rvc")
 }],
 "loop": true,
 "name": &"LEVEL_3",
@@ -53,9 +53,8 @@ script = ExtResource("1_m3xee")
 [node name="Grape_ProjectilePool" type="Node2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_nqp0c")
-animation = &"LEVEL_1"
+animation = &"LEVEL_3"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false

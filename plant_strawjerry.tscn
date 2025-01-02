@@ -1,16 +1,16 @@
 [gd_scene load_steps=5 format=3 uid="uid://bksl3rvl65x7q"]
 
-[ext_resource type="Texture2D" uid="uid://vk32htt1ag4a" path="res://art/Tiles/Plant03_Stage1.png" id="1_qqnfs"]
+[ext_resource type="Texture2D" uid="uid://bcu0i0b1icvvf" path="res://art/asesprite files/strawjerry_001.png" id="1_rrim0"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_d2w0r"]
-atlas = ExtResource("1_qqnfs")
-region = Rect2(0, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_uyc3x"]
+atlas = ExtResource("1_rrim0")
+region = Rect2(0, 0, 18, 18)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wbro5"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_d2w0r")
+"texture": SubResource("AtlasTexture_uyc3x")
 }],
 "loop": true,
 "name": &"default",
