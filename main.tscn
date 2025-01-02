@@ -1,9 +1,9 @@
 [gd_scene load_steps=30 format=4 uid="uid://dqv5an2dcb8p2"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_1y2lk"]
-[ext_resource type="Texture2D" uid="uid://ckhafygug4a2p" path="res://art/tilesheet.png" id="2_5auk8"]
 [ext_resource type="PackedScene" uid="uid://yj4xq8i8uolg" path="res://wizard.tscn" id="2_ligem"]
 [ext_resource type="Texture2D" uid="uid://x4h86hwcavra" path="res://art/Tiles/Asset 46.png" id="2_quun6"]
+[ext_resource type="Texture2D" uid="uid://bh7v45kv1i11t" path="res://art/asesprite files/tilesheet.png" id="3_g0uo2"]
 [ext_resource type="Script" path="res://forest.gd" id="3_uht4p"]
 [ext_resource type="PackedScene" uid="uid://c262fbwcrngth" path="res://dirt.tscn" id="4_jyv8d"]
 [ext_resource type="PackedScene" uid="uid://db0mu6td7him3" path="res://plant_grapeshot.tscn" id="5_7f7jy"]
@@ -33,7 +33,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/custom_data_0 = true
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gd8pc"]
-texture = ExtResource("2_5auk8")
+texture = ExtResource("3_g0uo2")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -89,8 +89,7 @@ position = Vector2(-16, -16)
 
 [node name="wizard" parent="." instance=ExtResource("2_ligem")]
 z_index = 99
-position = Vector2(188, 189)
-scale = Vector2(0.75, 0.75)
+position = Vector2(189, 189)
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" parent="wizard" index="0"]
@@ -107,17 +106,14 @@ metadata/_edit_group_ = true
 
 [node name="Plant_Gourdie" parent="." instance=ExtResource("6_cw0a4")]
 position = Vector2(-46, 153)
-scale = Vector2(0.65, 0.65)
 collision_layer = 2
 
 [node name="Plant_Strawjerry" parent="." instance=ExtResource("7_ist8w")]
 position = Vector2(-46, 104)
-scale = Vector2(0.65, 0.65)
 collision_layer = 2
 
 [node name="Plant_Aquaclam" parent="." instance=ExtResource("8_bny1a")]
 position = Vector2(-49, 67)
-scale = Vector2(0.65, 0.65)
 collision_layer = 2
 
 [node name="EnemyTarget" parent="." instance=ExtResource("17_m13fc")]
