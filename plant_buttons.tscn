@@ -1,0 +1,41 @@
+[gd_scene load_steps=9 format=3 uid="uid://bx3pfaf0gpcnc"]
+
+[ext_resource type="Texture2D" uid="uid://fdbsksh6n31" path="res://art/asesprite files/grapeshot_001.png" id="1_y0cb0"]
+[ext_resource type="Texture2D" uid="uid://cnd3hupgmueg6" path="res://art/asesprite files/grapeshot_toggleon.png" id="2_gh755"]
+[ext_resource type="Texture2D" uid="uid://g8b2ptlsywl4" path="res://art/asesprite files/gourdie_001.png" id="2_t1crk"]
+[ext_resource type="Texture2D" uid="uid://bcu0i0b1icvvf" path="res://art/asesprite files/strawjerry_001.png" id="3_nreew"]
+[ext_resource type="Texture2D" uid="uid://lsyfamh16n5" path="res://art/asesprite files/gourdie_toggleon.png" id="4_0l8cj"]
+[ext_resource type="Texture2D" uid="uid://d0ndfjdkhifhx" path="res://art/asesprite files/aquaclam_001.png" id="4_yahfw"]
+[ext_resource type="Texture2D" uid="uid://baj1pebm41070" path="res://art/asesprite files/strawjerry_toggleon.png" id="6_46axy"]
+[ext_resource type="Texture2D" uid="uid://cgueaw0owomvr" path="res://art/asesprite files/aquaclam_toggleon.png" id="8_n5vyl"]
+
+[node name="PlantButtons" type="Node2D"]
+
+[node name="GrapeshotButton" type="TextureButton" parent="."]
+offset_right = 18.0
+offset_bottom = 18.0
+toggle_mode = true
+action_mode = 0
+texture_normal = ExtResource("1_y0cb0")
+texture_pressed = ExtResource("2_gh755")
+
+[node name="GourdieButton" type="TextureButton" parent="."]
+offset_right = 18.0
+offset_bottom = 18.0
+toggle_mode = true
+texture_normal = ExtResource("2_t1crk")
+texture_pressed = ExtResource("4_0l8cj")
+
+[node name="StrawjerryButton" type="TextureButton" parent="."]
+offset_right = 18.0
+offset_bottom = 18.0
+toggle_mode = true
+texture_normal = ExtResource("3_nreew")
+texture_pressed = ExtResource("6_46axy")
+
+[node name="AquaclamButton" type="TextureButton" parent="."]
+offset_right = 18.0
+offset_bottom = 18.0
+toggle_mode = true
+texture_normal = ExtResource("4_yahfw")
+texture_pressed = ExtResource("8_n5vyl")
