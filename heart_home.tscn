@@ -1,14 +1,14 @@
 [gd_scene load_steps=14 format=3 uid="uid://cvdsbhnx8dmyr"]
 
 [ext_resource type="Script" path="res://heart_home.gd" id="1_5uva4"]
-[ext_resource type="Texture2D" uid="uid://ckhafygug4a2p" path="res://art/tilesheet.png" id="1_apu3t"]
 [ext_resource type="Texture2D" uid="uid://bx6o8ret2cvv5" path="res://art/Tiles/hearthome_75_1.png" id="2_8l7yk"]
+[ext_resource type="Texture2D" uid="uid://bh7v45kv1i11t" path="res://art/asesprite files/tilesheet.png" id="2_jan7e"]
 [ext_resource type="Texture2D" uid="uid://bucnnk4axyc7y" path="res://art/Tiles/hearthome_50.png" id="3_23wey"]
 [ext_resource type="Texture2D" uid="uid://cn3r1bko4nwws" path="res://art/Tiles/Asset 31.png" id="4_rb180"]
 [ext_resource type="Texture2D" uid="uid://cl7tey4x2wfru" path="res://art/Tiles/hearthome_00.png" id="5_bbu5e"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lh3r5"]
-atlas = ExtResource("1_apu3t")
+[sub_resource type="AtlasTexture" id="AtlasTexture_1e6ss"]
+atlas = ExtResource("2_jan7e")
 region = Rect2(64, 96, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ncte8"]
@@ -31,7 +31,7 @@ region = Rect2(0, 0, 33, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lh3r5")
+"texture": SubResource("AtlasTexture_1e6ss")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ncte8")
