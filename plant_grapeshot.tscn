@@ -57,6 +57,5 @@ sprite_frames = SubResource("SpriteFrames_nqp0c")
 animation = &"LEVEL_3"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 shape = SubResource("RectangleShape2D_bjmw4")
 debug_color = Color(0.896896, 0.000202534, 0.777581, 0.654902)
