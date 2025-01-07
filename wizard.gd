@@ -39,7 +39,7 @@ func _process(delta: float) -> void:
 		print(w_dtag, "the wizard's global position is: " + str(
 			Global.wizard_position))
 			
-		#tilling action pulled from Tilling singleton
+		# tilling action pulled from Tilling singleton
 		Tilling.place_dirt(self.position)
 			 
 	# sets movement * speed, normalizes it

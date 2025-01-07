@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://b72i12hh76xyu"]
+
+[ext_resource type="Texture2D" uid="uid://qphtq3qw8twf" path="res://art/asesprite files/dirt.png" id="1_dsmsr"]
+[ext_resource type="Texture2D" uid="uid://dq847sokvtljf" path="res://art/asesprite files/dirt_select.png" id="2_g6iqy"]
+
+[node name="ActionButtons" type="Node2D"]
+
+[node name="TillButton" type="TextureButton" parent="."]
+z_index = 1000
+offset_right = 33.0
+offset_bottom = 33.0
+toggle_mode = true
+texture_normal = ExtResource("1_dsmsr")
+texture_pressed = ExtResource("2_g6iqy")

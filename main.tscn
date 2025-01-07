@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://dqv5an2dcb8p2"]
+[gd_scene load_steps=33 format=4 uid="uid://dqv5an2dcb8p2"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_1y2lk"]
 [ext_resource type="PackedScene" uid="uid://yj4xq8i8uolg" path="res://wizard.tscn" id="2_ligem"]
@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://cox8wn6rscmb6" path="res://art/Tiles/Asset 42.png" id="21_0piad"]
 [ext_resource type="Texture2D" uid="uid://fhgmvqcuq8nm" path="res://art/Tiles/Asset 43.png" id="22_ttdp7"]
 [ext_resource type="PackedScene" uid="uid://bx3pfaf0gpcnc" path="res://plant_buttons.tscn" id="25_4r3f7"]
+[ext_resource type="PackedScene" uid="uid://b72i12hh76xyu" path="res://action_buttons.tscn" id="26_t465v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0l7co"]
 texture = ExtResource("2_quun6")
@@ -265,6 +266,15 @@ offset_right = 111.0
 offset_bottom = 304.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_uv2e8")
 
+[node name="ActionButtons" parent="." instance=ExtResource("26_t465v")]
+
+[node name="TillButton" parent="ActionButtons" index="0"]
+offset_left = 18.0
+offset_top = 308.0
+offset_right = 51.0
+offset_bottom = 341.0
+
 [editable path="dirt"]
 [editable path="wizard"]
 [editable path="PlantButtons"]
+[editable path="ActionButtons"]
