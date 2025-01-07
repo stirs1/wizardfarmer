@@ -22,6 +22,7 @@ Tilling="*res://Tilling.gd"
 PickPlace="*res://pick_place.gd"
 GameManager="*res://GameManager.gd"
 CombatManager="*res://CombatManager.gd"
+ActionManager="*res://ActionManager.gd"
 
 [debug]
 
