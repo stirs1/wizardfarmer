@@ -11,7 +11,7 @@ func drop_plant():
 	# snaps plant to the grid when placed
 	held_plant.position = (Global.snap_to_grid(
 		Global.wizard_position) - Vector2(
-			Global.tile_size, Global.tile_size))
+			Global.TILE_SIZE, Global.TILE_SIZE))
 	
 	# stores position as string 
 	var held_plant_position_str = str(held_plant.position)

@@ -105,8 +105,8 @@ func _on_game_started():
 	
 	for plant in Global.PlantPots:
 		plant_start_cell = Global.snap_to_grid(
-			Vector2(6 * Global.tile_size, (6 + plant_count) * Global.tile_size))
-		plant.position = plant_start_cell + (Vector2(0, Global.tile_size))
+			Vector2(6 * Global.TILE_SIZE, (6 + plant_count) * Global.TILE_SIZE))
+		plant.position = plant_start_cell + (Vector2(0, Global.TILE_SIZE))
 		plant_count += 1 
 
 func _on_game_over():

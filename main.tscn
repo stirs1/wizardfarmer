@@ -216,15 +216,14 @@ texture_normal = ExtResource("21_0piad")
 texture_pressed = ExtResource("22_ttdp7")
 
 [node name="GameOverText" type="TextEdit" parent="."]
-visible = false
 z_index = 1000
-offset_left = 16.0
-offset_top = 278.0
-offset_right = 124.0
-offset_bottom = 345.0
+offset_left = 149.0
+offset_top = 19.0
+offset_right = 186.0
+offset_bottom = 49.0
 theme_override_colors/background_color = Color(0.898039, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 12
 text = "REKT"
 
 [node name="PlantButtons" parent="." instance=ExtResource("25_4r3f7")]
@@ -272,7 +271,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_uv2e8")
 offset_left = 18.0
 offset_top = 308.0
 offset_right = 51.0
-offset_bottom = 341.0
+offset_bottom = 340.0
 
 [editable path="dirt"]
 [editable path="wizard"]
