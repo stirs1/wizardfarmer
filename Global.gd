@@ -1,8 +1,8 @@
 extends Node
 
 # grid alignment tools
-const tile_size  = 32 
-const tile_offset = tile_size / 2
+const TILE_SIZE  = 32 
+const TILE_OFFSET = TILE_SIZE / 2
 
 # preloads
 @onready var WizardScene = preload("res://wizard.tscn") 
@@ -32,10 +32,10 @@ var heart_home = Vector2()
 func snap_to_grid(position: Vector2) -> Vector2:
 	var new_position = Vector2.ZERO
 	new_position.x = (
-		(round(position.x / tile_size) * tile_size) + tile_offset
+		(round(position.x / TILE_SIZE) * TILE_SIZE) + TILE_OFFSET
 		)
 	new_position.y = (
-		(round(position.y / tile_size) * tile_size) + tile_offset
+		(round(position.y / TILE_SIZE) * TILE_SIZE) + TILE_OFFSET
 		)
 	return new_position
 
@@ -53,7 +53,7 @@ func _ready():
 	# set wizard start cell right here. 
 	# FIXME: something weird happening with the wizard's origin point
 	start_cell = snap_to_grid(
-		Vector2(7 * tile_size, 7 * tile_size)) + Vector2(13, 13
+		Vector2(7 * TILE_SIZE, 7 * TILE_SIZE)) + Vector2(13, 13
 		)
 
 	# this makes sure the wizard is on the correct cell AND centered
@@ -63,12 +63,12 @@ func _ready():
 	# room here for improvement/more robust logic
 	#for plant in Global.PlantPots:
 		#plant_start_cell = snap_to_grid(
-			#Vector2(6 * tile_size, (6 + plant_count) * tile_size))
-		#plant.position = plant_start_cell + (Vector2(0, tile_size))
+			#Vector2(6 * TILE_SIZE, (6 + plant_count) * TILE_SIZE))
+		#plant.position = plant_start_cell + (Vector2(0, TILE_SIZE))
 		#plant_count += 1 
 		
 	# this defines the no grow zones. This is hard-coded, but i think there's a
-	# way to just loop from starting coordinates to end by adding tile_size?
+	# way to just loop from starting coordinates to end by adding TILE_SIZE?
 	no_grow_zones = {
 		
 		# zone 1
@@ -109,4 +109,4 @@ func _physics_process(delta: float) -> void:
 		  
 	# defining wizard global position and grid coordinates
 	wizard_position = wizard.global_position
-	wizard_cell_position = round(wizard_position / tile_size)
+	wizard_cell_position = round(wizard_position / TILE_SIZE)

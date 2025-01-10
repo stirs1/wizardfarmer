@@ -1,7 +1,6 @@
 extends CharacterBody2D
 
 var speed = 200 # this number changes the wizard's speed
-@onready var tile_size
 @onready var grapeshot = get_tree().root.get_node("Main/Plant_Grapeshot")
 var w_dtag := "WIZARD: "
 
