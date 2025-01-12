@@ -2,6 +2,7 @@ extends Node
 
 # HMM... perfectin is teh enmey of prgres
 # SIGNALS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SIGNALS #
+#signal button_in_use
 # ENUMS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ENUMS #
 # CONSTANTS - - - - - - - - - - - - - - - - - - - - - - - - - - - - CONSTANTS #
 # VARIABLES - - - - - - - - - - - - - - - - - - - - - - - - - - - - VARIABLES #

@@ -4,12 +4,14 @@ var plant_count = 0
 var plant_start_cell = Vector2()
 var cm_dtag := "COMBAT MANAGER: "
 var pumpkin_start_cell
-var gmouse_pos = DisplayServer.mouse_get_position()
 
 # grapeshot preview variables
 var preview_grapeshot = null
 var preview_plant_sprite = null
 var is_grape_preview_active = false 
+var gmouse_pos: Vector2 = Vector2.ZERO
+var parent
+var grape_position_str
 
 @onready var PumpkinScene = preload("res://enemy_pumpkin.tscn")
 @onready var GrapeshotScene = preload("res://plant_grapeshot.tscn")
@@ -64,7 +66,10 @@ func _process(delta: float) -> void:
 	
 	# continually assigns preview grapeshot position to mouse
 	if preview_grapeshot:
-		preview_grapeshot.global_position = get_viewport().get_mouse_position()
+		gmouse_pos = get_viewport().get_mouse_position()
+		preview_grapeshot.global_position = Global.snap_to_grid(
+		gmouse_pos - Vector2(Global.TILE_OFFSET, Global.TILE_OFFSET)
+		)
 
 func spawn_pumpkin(position_key: String):
 	var pumpkin = PumpkinScene.instantiate()
@@ -140,3 +145,49 @@ func grapeshot_toggle():
 		place_grape_preview()
 	else:
 		remove_grape_preview()
+
+func place_grapeshot():
+	parent = GrapeshotScene.instantiate()
+	parent.position = Global.snap_to_grid(gmouse_pos - Vector2(
+		Global.TILE_OFFSET, Global.TILE_OFFSET)
+		)
+		
+	var grape_position_str = str(parent.position)
+	
+	if grape_position_str in Global.existing_dirt_tiles:
+		if not grape_position_str in Global.existing_plant_tiles:
+			if not grape_position_str in Global.no_grow_zones:
+				Global.existing_plant_tiles[str(parent.position)] = true
+				parent.z_index = 3
+				add_child(parent)
+				
+				# start held plant timer
+				if parent.get("timer"):
+					parent.timer.start()
+				else:
+					pass
+				# start held plant stage timer
+				if parent.get("stage_timer"):
+					parent.stage_timer.start()
+				else:
+					pass
+				# add plant to current plants, for future use
+				parent.add_to_group("CurrentPlants")
+				# place plant
+				parent = null
+				return
+			else:
+				print("this is a no-grow zone!")
+				return
+		else:
+			print("there is already a plant here!")
+			return
+	else:
+		print("this tile needs to be tilled!")
+		return
+	
+func _unhandled_input(event: InputEvent):
+	if is_grape_preview_active and event is InputEventMouseButton:
+		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+			print(cm_dtag, "left mouse button clicked")
+			place_grapeshot()
