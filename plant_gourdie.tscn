@@ -21,6 +21,7 @@ animations = [{
 size = Vector2(32, 32)
 
 [node name="Plant_Gourdie" type="CharacterBody2D" groups=["PlantPots"]]
+collision_layer = 0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_fqk6s")
