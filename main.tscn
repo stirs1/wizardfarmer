@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://dqv5an2dcb8p2"]
+[gd_scene load_steps=34 format=4 uid="uid://dqv5an2dcb8p2"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_1y2lk"]
 [ext_resource type="PackedScene" uid="uid://yj4xq8i8uolg" path="res://wizard.tscn" id="2_ligem"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c262fbwcrngth" path="res://dirt.tscn" id="4_jyv8d"]
 [ext_resource type="PackedScene" uid="uid://db0mu6td7him3" path="res://plant_grapeshot.tscn" id="5_7f7jy"]
 [ext_resource type="PackedScene" uid="uid://bqcp6w6fox8wq" path="res://plant_gourdie.tscn" id="6_cw0a4"]
+[ext_resource type="PackedScene" uid="uid://ds2dx0n2miiql" path="res://goofy_flower.tscn" id="7_fob2u"]
 [ext_resource type="PackedScene" uid="uid://bksl3rvl65x7q" path="res://plant_strawjerry.tscn" id="7_ist8w"]
 [ext_resource type="PackedScene" uid="uid://dqbx3nxxecqrs" path="res://plant_aquaclam.tscn" id="8_bny1a"]
 [ext_resource type="PackedScene" uid="uid://cvdsbhnx8dmyr" path="res://heart_home.tscn" id="11_g8oir"]
@@ -103,6 +104,30 @@ offset = Vector2(-16, -16)
 [node name="CollisionShape2D" parent="wizard" index="1"]
 position = Vector2(-16, -16)
 debug_color = Color(0.964706, 0, 0.498039, 0.411765)
+
+[node name="Goofy_Flower" parent="." instance=ExtResource("7_fob2u")]
+position = Vector2(432, 198)
+
+[node name="Goofy_Flower2" parent="." instance=ExtResource("7_fob2u")]
+position = Vector2(464, 198)
+
+[node name="Goofy_Flower3" parent="." instance=ExtResource("7_fob2u")]
+position = Vector2(432, 230)
+
+[node name="Goofy_Flower4" parent="." instance=ExtResource("7_fob2u")]
+position = Vector2(464, 230)
+
+[node name="Goofy_Flower5" parent="." instance=ExtResource("7_fob2u")]
+position = Vector2(368, 198)
+
+[node name="Goofy_Flower6" parent="." instance=ExtResource("7_fob2u")]
+position = Vector2(400, 198)
+
+[node name="Goofy_Flower7" parent="." instance=ExtResource("7_fob2u")]
+position = Vector2(368, 230)
+
+[node name="Goofy_Flower8" parent="." instance=ExtResource("7_fob2u")]
+position = Vector2(400, 230)
 
 [node name="Plant_Grapeshot" parent="." instance=ExtResource("5_7f7jy")]
 position = Vector2(-52, 193)
@@ -216,6 +241,7 @@ texture_normal = ExtResource("21_0piad")
 texture_pressed = ExtResource("22_ttdp7")
 
 [node name="GameOverText" type="TextEdit" parent="."]
+visible = false
 z_index = 1000
 offset_left = 149.0
 offset_top = 19.0
